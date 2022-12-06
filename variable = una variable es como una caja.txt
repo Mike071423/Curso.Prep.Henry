@@ -1,0 +1,28 @@
+variable = una variable es como una caja en donde podremos guardar algo,
+ con su respectivo nombre y poderlo sacar de la cajita siempre que lo necesitemos, solo diciendo su nombre;
+
+
+ strings = es una fila de letras que podemos juntarlas y formar la palabra o fraces que deseemos;
+
+
+
+ return = es algo que nos ayuda a obteber el resultado de la pregunta o accion que le ordenamos a el pc 
+
+
+if = con esta declaracion podremos ponerle condiciones a el programa para que estas nos ayuden
+     a obtener el resultado que deseamos;
+
+
+
+true y false  = estos son valores booleanos que nos ayudan a saber si algo es verdadero o falso;
+
+
+
+
+
+
+
+
+
+
+

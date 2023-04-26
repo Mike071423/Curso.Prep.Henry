@@ -3,14 +3,14 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array [0];
+    return array [0];
 } 
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array [array.length -1];
+  return [array.length -1];
 }
 
 
@@ -125,6 +125,12 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length < 1) return 0;
+  let multiplicar = 1;
+  for(let i = 0; i < arguments.length; i++){
+    multiplicar = multiplicar * arguments[i];
+  }
+    return multiplicar;
 }
 
 
@@ -134,7 +140,7 @@ function cuentoElementos(arreglo){
   var cantidad  = 0;
   for(var i = 0 ; i < arreglo.length; i++){
    if( arreglo [i] > 18 ){
-     cantidad ++
+     cantidad ++;
    }
   }
    return cantidad;
@@ -160,7 +166,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   var str = n + "" ;
-  if(str [0] === "9") return true;
+  if(str [0] === "9") return true; 
    return false;
 }
 
@@ -203,12 +209,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  let mayor100 = [];
-  for(let i = 0 ; i < array.length; i++){
+   let mayor100 = [];
+   for(let i = 0 ; i < array.length; i++){      
     if(array[i] > 100){
       mayor100.push(array[i]);
     }
-  }  return mayor100;
+   } return mayor100;
+  
      
 
 }
@@ -222,6 +229,7 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+
 }
 
 

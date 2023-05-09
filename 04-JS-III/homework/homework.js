@@ -10,7 +10,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return [array.length -1];
+  return array [array.length -1];
 }
 
 
@@ -130,7 +130,7 @@ function multiplicarArgumentos() {
   for(let i = 0; i < arguments.length; i++){
     multiplicar = multiplicar * arguments[i];
   }
-    return multiplicar;
+    return multiplicar; 
 }
 
 
@@ -229,7 +229,19 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  const NumerosResultado = [];
+  for(var i = 0; i <10; i++){
+    numero += 2;
+    NumerosResultado.push(numero);
 
+    if(numero === i+1){
+      break;
+    }  
+  }
+     if(i < 10){
+      return "Se interrumpió la ejecución"
+     }
+        return NumerosResultado;
 }
 
 
@@ -240,6 +252,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  const numArray = [];
+  for(let i = 0; i < 10; i++){
+    if(i + 1 === 5){
+      continue;
+    }
+    numero += 2;
+    numArray.push(numero);
+  }
+     return numArray;
+
 }
 
 

@@ -5,15 +5,14 @@ function crearGato(nombre, edad) {
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
-  // Tu código:
-  var gatito = {
+  let gato = {
     nombre: nombre,
     edad: edad,
     meow: function () {
       return "Meow!";
     },
   };
-  return gatito;
+  return gato;
 }
 
 function agregarPropiedad(objeto, property) {
@@ -21,6 +20,8 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  // objeto[property] = null;
+  // return objeto;
   objeto[property] = null;
   return objeto;
 }
@@ -37,8 +38,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  let resultado = objetoMisterioso.numeroMisterioso * 5;
-  return resultado;
+  return objetoMisterioso.numeroMisterioso * 5;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -52,7 +52,7 @@ function eliminarPropiedad(objeto, unaPropiedad) {
 
 function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
-  // Devuelve el objeto
+  // Devuelve el objetoj
   // Tu código:
   let obj = {
     nombre: nombre,
@@ -79,7 +79,6 @@ function tienePropiedad(objeto, propiedad) {
   // Tu código:
   // otra forma podria ser la siguiente:  return objeto.hasOwnProperty(propiedad);
   //  return objeto.hasOwnProperty(propiedad);
-
   if (objeto.hasOwnProperty(propiedad)) {
     return true;
   }
@@ -91,11 +90,11 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  // if ( usuario.password === password){
-  //   return true;
-  // }
-  //   return false; otr
-  return usuario.password === password;
+  // return usuario.password === password;
+  if (usuario.password === password) {
+    return true;
+  }
+  return false;
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
@@ -124,11 +123,8 @@ function pasarUsuarioAPremium(usuarios) {
   // for (let i = 0; i < usuarios.length; i++) {
   //   usuarios[i].esPremium = true;
   // }
-  // return usuarios;  otra forma de solucionar el ejercicio es la siguiente:
-
-  for (let user of usuarios) {
-    user.esPremium = true;
-  }
+  // return usuarios;  otra forma de solucionar el ejercicio es la siguiente: que nos permite cambiar varios elementos a un solo valor o restablecer la matriz con el valor dado.
+  usuarios.fill({ esPremium: true });
   return usuarios;
 }
 
@@ -143,12 +139,12 @@ function sumarLikesDeUsuario(usuario) {
   // for (let i = 0; i < usuario.posts.length; i++) {
   //   suma += usuario.posts[i].likes;
   // }
-  // return suma; otra forma de hacer el ejercicio es utilizando un forEach
-  let sumalikes = 0;
+  // return suma; otra forma de hacer el ejercicio es utilizando un reduce() y el forEach()
+  let totalLikes = 0;
   usuario.posts.forEach((post) => {
-    sumalikes += post.likes;
+    totalLikes += post.likes;
   });
-  return sumalikes;
+  return totalLikes;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -161,7 +157,7 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  producto.calcularPrecioDescuento = function () {
+  producto.calcularPrecioDescuento = () => {
     const descuento = producto.precio * producto.porcentajeDeDescuento;
     let precioFinal = producto.precio - descuento;
     return precioFinal;

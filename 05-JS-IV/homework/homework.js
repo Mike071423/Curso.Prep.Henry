@@ -32,6 +32,7 @@ function invocarMetodo(objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
   objeto[metodo]();
+  return objeto;
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
@@ -109,7 +110,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
-  // // Tu código:
+  // // Tu código: en este caso utilizamos el .push() que este nos permite agregar un elemento al final de un array
   usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
@@ -123,7 +124,7 @@ function pasarUsuarioAPremium(usuarios) {
   // for (let i = 0; i < usuarios.length; i++) {
   //   usuarios[i].esPremium = true;
   // }
-  // return usuarios;  otra forma de solucionar el ejercicio es la siguiente: que nos permite cambiar varios elementos a un solo valor o restablecer la matriz con el valor dado.
+  // return usuarios;  otra forma de solucionar el ejercicio es la siguiente: utilizar el metodo fill()  que nos permite cambiar varios elementos a un solo valor o restablecer la matriz con el valor dado.
   usuarios.fill({ esPremium: true });
   return usuarios;
 }
